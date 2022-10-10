@@ -9,11 +9,14 @@ plugins {
     id 'maven-publish'
 }
 
-repositories {
-    mavenLocal()
+repositories  {
     maven {
-        url = uri('https://repo.maven.apache.org/maven2/')
+        url 'https://nexus.mgmt-bld.oncp.dev/repository/maven-public/'
     }
+    maven {
+        url 'https://nexus.sbs-bld.oncp.dev.dev/repository/shared-services'
+    }
+    mavenCentral()
 }
 
 dependencies {

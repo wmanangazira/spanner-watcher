@@ -4,4 +4,30 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
+pluginManagement {
+    repositories {
+        maven {
+            url 'https://nexus.mgmt-bld.oncp.dev/repository/maven-public/'
+        }
+    }
+}
+
+enableFeaturePreview("VERSION_CATALOGS")
+dependencyResolutionManagement {
+    repositories {
+        maven {'https://nexus.mgmt-bld.oncp.dev/repository/maven-public/'
+
+        }
+        maven {'https://nexus.sbs-bld.oncp.dev/repository/shared-services'
+
+        }
+    }
+}
+
+versionCatalogs {
+    libs {
+        from("com.lbg:lbg-gradle-catalog:1.4.2")
+    }
+}
+
 rootProject.name = 'spanner-change-watcher-samples'
