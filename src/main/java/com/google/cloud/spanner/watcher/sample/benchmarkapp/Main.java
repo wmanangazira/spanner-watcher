@@ -57,7 +57,7 @@ public class Main {
         abbrev = 'i',
         help =
             "Required: The name of the Cloud Spanner instance to use. This instance must already exist.",
-        defaultValue = "my-instance")
+        defaultValue = "ccdt-1229")
     public String instance;
 
     @Option(
@@ -65,7 +65,7 @@ public class Main {
         abbrev = 'd',
         help =
             "Required: The name of the Cloud Spanner database to use. The database will be created if it does not already exist.",
-        defaultValue = "my-database")
+        defaultValue = "sp-db")
     public String database;
 
     @Option(
